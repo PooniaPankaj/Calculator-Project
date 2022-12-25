@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="calculator.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="outer_box">
+        <div class="answere" id="answere">0</div>
+        <div class="layer_1">
+            <button type="button" class="oper_AC" data-value="AC" onclick="onclick_event(this)">AC</button>
+            <button type="button" class="oper_sign_change" data-value="+/-" onclick="onclick_event(this)">+/-</button>
+            <button type="button" class="oper_percentage" data-value="%" onclick="onclick_event(this)">%</button>
+            <button type="button" style="background-color: orange;" class="oper_div" onclick="onclick_event(this)" data-value="/">/</button>
+        </div>
+
+
+        <div class="layer_2">
+            <button type="button" class="oper_7" data-value="7" onclick="onclick_event(this)">7</button>
+            <button type="button" class="oper_8" data-value="8" onclick="onclick_event(this)">8</button>
+            <button type="button" class="oper_9" data-value="9" onclick="onclick_event(this)">9</button>
+            <button type="button" style="background-color: orange;" class="oper_x" data-value="*" onclick="onclick_event(this)">x</button>
+        
+        </div>
+        <div class="layer_3">
+            <button type="button" class="oper_4" data-value="4" onclick="onclick_event(this)">4</button>
+            <button type="button" class="oper_5" data-value="5" onclick="onclick_event(this)">5</button>
+            <button type="button" class="oper_6" data-value="6" onclick="onclick_event(this)">6</button>
+            <button type="button" style="background-color: orange;" class="oper_minus" data-value="-" onclick="onclick_event(this)">-</button>
+        
+        </div>
+        <div class="layer_4">
+            <button type="button" class="oper_1" data-value="1" onclick="onclick_event(this)">1</button>
+            <button type="button" class="oper_2" data-value="2" onclick="onclick_event(this)">2</button>
+            <button type="button" class="oper_3" data-value="3" onclick="onclick_event(this)">3</button>
+            <button type="button" style="background-color: orange;" onclick="onclick_event(this)" class="oper_plus" data-value="+">+</button>
+        
+        </div>
+        <div class="layer_5">
+            <button type="button" class="oper_0" data-value="0" onclick="onclick_event(this)">0</button>
+            <button type="button" class="oper_." data-value="." onclick="onclick_event(this)">.</button>
+            <button type="button" style="background-color: orange;border-radius: 0 0 10px 0;" onclick="onclick_event(this)" class="oper_equal" data-value="=">=</button>
+        
+        </div>
+        
+    </div>
+    <script src="claculator.js"></script>
+    
+</body>
+</html>
