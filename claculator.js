@@ -1,21 +1,20 @@
-var a1 = document.getElementsByTagName('button');
-var answer = document.getElementById('answere');
+var a1 = document.getElementsByTagName('button');   // fetching all buttons
+var answer = document.getElementById('answere');    // fetching all elements with id answere 
 
-var operand1 = 0;
+var operand1 = 0; // intially operand 1 is 0 and operator need to be performed is also null as not specified yet
 var operand2 = 0;
 var operator = null;
 var done = false;
 var second_data_entered =false;
-console.log("hello");
 
-for (var i = 0;i<a1.length;++i){
-    var a2 = a1[i];
-    a1[i].addEventListener('click',function(){
-        var value = this.getAttribute('data-value');
+for (var i = 0;i<a1.length;++i){  // just itterating over all buttons to know which one is clicked 
+    var a2 = a1[i];   // fechin clicked buttons into th e variables
+    a1[i].addEventListener('click',function(){  // adding event listener to the buttons 
+        var value = this.getAttribute('data-value'); // fetching  value of the buttons into variables 
         if (value=='+' || value=='-' || value=='/' || value=='*'){
-            operator = value;
-            operand1 = parseFloat(answer.textContent);
-            done = true;
+            operator = value; // fetching operator 
+            operand1 = parseFloat(answer.textContent); // setting the operand one on getting the operator
+            done = true; 
         }
         else if(value=='%'){
             var g1 = parseFloat(answer.textContent);
@@ -26,7 +25,7 @@ for (var i = 0;i<a1.length;++i){
         else if(value=='+/-'){
             if (answer.innerText[0]=='-'){
                 var temp = answer.innerText;
-                var temp1 = temp.slice(1);
+                var temp1 = temp.slice(1);// if intially our number is -ve than we just need to make it positive by just removing the -ve sign
                 answer.innerText = temp1;
             }
             else {
@@ -36,12 +35,12 @@ for (var i = 0;i<a1.length;++i){
         else if(value=='='){
             
                 operand2 = parseFloat(answer.textContent);
-                if (!second_data_entered){
+                if (!second_data_entered){// if we call = without entering th evalue of 2nd operand than it will just make it as 0
                     operand2 =0;
                 }
-                var temp = eval(operand1+" "+operator+" "+operand2);
+                var temp = eval(operand1+" "+operator+" "+operand2);  // eval function for evaluating our expression 
                 answer.innerText=temp;
-                operand1 = temp;
+                operand1 = temp;// setting the result as operand 1 as there might be the case that we can again perform more operations on it
                 operand2 = 0;
                 operator = null;
             
